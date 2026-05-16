@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Voltara | Global Performance Hub</title>
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1633190542264617" crossorigin="anonymous"></script>
     <style>
         :root {
             --bg-main: #f1f5f9;
@@ -56,19 +57,12 @@
             font-weight: 500;
         }
 
-        .ad-placeholder-top {
+        .ad-wrapper-top {
             width: 100%;
-            max-width: 1300px;
-            height: 90px;
-            background-color: var(--bg-card);
+            max-width: 1350px;
             margin: 8px auto;
-            border: 1px dashed var(--border);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: var(--text-muted);
-            font-size: 0.8rem;
-            border-radius: 12px;
+            padding: 0 20px;
+            text-align: center;
         }
 
         .nav-tabs {
@@ -102,7 +96,6 @@
             box-shadow: 0 4px 12px rgba(37, 99, 235, 0.15);
         }
 
-        /* Layout Architecture Configuration */
         .app-workspace {
             display: grid;
             grid-template-columns: 220px 1fr 340px;
@@ -110,8 +103,7 @@
             max-width: 1350px;
             width: 100%;
             margin: 0 auto;
-            padding: 0 20px 40px;
-            flex: 1;
+            padding: 0 20px 24px;
         }
 
         .side-panel {
@@ -158,7 +150,6 @@
         }
         .live-num { font-weight: 700; color: #10b981; }
 
-        /* Profile Manager Deck */
         .profile-status-box {
             margin-top: 16px;
             padding-top: 16px;
@@ -178,13 +169,12 @@
             margin-bottom: 12px;
         }
 
-        /* Center Content Box Stage */
         .center-stage { display: flex; flex-direction: column; }
 
         .game-container {
             background: var(--bg-card);
-            border-radius: 16px;
             border: 1px solid var(--border);
+            border-radius: 16px;
             height: 420px;
             position: relative;
             overflow: hidden;
@@ -225,7 +215,6 @@
             margin-bottom: 12px;
         }
 
-        /* Reaction Colors Shifted: Waiting is Green, Trigger State is Red */
         .state-waiting { background: var(--grad-green); color: #ffffff; }
         .state-waiting .screen-desc { color: #ffffff; opacity: 0.85; }
         .state-ready { background: var(--grad-red); color: #ffffff; }
@@ -241,7 +230,6 @@
         }
         .cps-counter { font-size: 4rem; font-weight: 800; margin-top: 16px; }
 
-        /* Aim Area */
         #aim-canvas-container { width: 100%; flex: 1; position: relative; background: #f8fafc; }
         .aim-target {
             position: absolute;
@@ -263,12 +251,7 @@
             font-weight: 600;
         }
 
-        /* Right Side Leaderboard Bracket (15 positions) */
-        .leaderboard-scrollbox {
-            max-height: 420px;
-            overflow-y: auto;
-            padding-right: 4px;
-        }
+        .leaderboard-scrollbox { max-height: 420px; overflow-y: auto; padding-right: 4px; }
         .leaderboard-scrollbox::-webkit-scrollbar { width: 6px; }
         .leaderboard-scrollbox::-webkit-scrollbar-thumb { background: var(--border); border-radius: 4px; }
         
@@ -281,19 +264,47 @@
             border: 1px solid var(--border);
             border-radius: 8px;
             font-size: 0.85rem;
-            transition: all 0.3s ease;
         }
-        .leaderboard-row.user-row {
-            background: #dcfce7;
-            border-color: #4ade80;
-            font-weight: bold;
-        }
+        .leaderboard-row.user-row { background: #dcfce7; border-color: #4ade80; font-weight: bold; }
         .rank-num { width: 28px; font-weight: 700; color: var(--text-muted); }
         .flag-icon { margin-right: 6px; font-size: 1rem; }
         .player-name { flex: 1; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; padding-right: 4px; }
         .player-score { font-weight: 700; color: var(--text-main); }
 
-        /* Modal Settings Sheet Overlay */
+        /* CONTENT ENGINE FOR GOOGLE ADSENSE COMPLIANCE */
+        .content-scaffolding {
+            max-width: 1350px;
+            width: 100%;
+            margin: 0 auto;
+            padding: 0 20px 32px;
+        }
+        .content-card {
+            background: var(--bg-card);
+            border: 1px solid var(--border);
+            border-radius: 16px;
+            padding: 32px;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.02);
+        }
+        .content-section { margin-bottom: 24px; }
+        .content-section:last-child { margin-bottom: 0; }
+        .content-section h2 { font-size: 1.4rem; font-weight: 700; color: var(--text-main); margin-bottom: 10px; }
+        .content-section p { font-size: 0.95rem; color: var(--text-muted); line-height: 1.6; text-align: justify; user-select: text; }
+
+        /* COMPLIANCE FOOTER SYSTEM */
+        footer {
+            background: var(--bg-card);
+            border-top: 1px solid var(--border);
+            padding: 20px 16px;
+            text-align: center;
+            font-size: 0.85rem;
+            color: var(--text-muted);
+            margin-top: auto;
+        }
+        .footer-links { display: flex; justify-content: center; gap: 16px; margin-bottom: 8px; }
+        .footer-link { color: var(--text-muted); cursor: pointer; text-decoration: none; font-weight: 500; }
+        .footer-link:hover { color: #3b82f6; }
+
+        /* MODALS (PROFILE + LEGAL DISCLOSURES) */
         .modal-overlay {
             position: fixed;
             top:0; left:0; width:100%; height:100%;
@@ -307,9 +318,11 @@
         }
         .modal-card {
             background: var(--bg-card); border-radius: 16px; padding: 24px;
-            max-width: 360px; width: 100%; box-shadow: 0 20px 25px -5px rgba(0,0,0,0.1);
+            max-width: 480px; width: 100%; box-shadow: 0 20px 25px -5px rgba(0,0,0,0.1);
+            max-height: 80vh; overflow-y: auto;
         }
         .modal-card h2 { font-size: 1.3rem; font-weight: 800; margin-bottom: 14px; text-align: center; }
+        .legal-text { font-size: 0.85rem; color: var(--text-muted); line-height: 1.5; text-align: left; margin-bottom: 16px; user-select: text; }
         .form-group { text-align: left; margin-bottom: 14px; }
         .form-group label { display: block; font-size: 0.8rem; font-weight: 700; margin-bottom: 6px; }
         .form-control {
@@ -361,7 +374,15 @@
                 </select>
             </div>
             <button class="action-btn" onclick="saveUserProfile()">Save Changes</button>
-            <button class="secondary-btn" style="margin-top: 8px;" onclick="closeProfileModal()">Cancel</button>
+            <button class="secondary-btn" style="margin-top: 8px;" onclick="closeModal('profile-modal')">Cancel</button>
+        </div>
+    </div>
+
+    <div id="legal-modal" class="modal-overlay">
+        <div class="modal-card">
+            <h2 id="legal-modal-title">Compliance Document</h2>
+            <div id="legal-modal-body" class="legal-text"></div>
+            <button class="action-btn" onclick="closeModal('legal-modal')">Close Window</button>
         </div>
     </div>
 
@@ -370,8 +391,16 @@
         <p>Global Benchmark Testing Matrix</p>
     </header>
 
-    <div class="ad-placeholder-top">
-        Ad Display Inventory Slot Resizes Automatically
+    <div class="ad-wrapper-top">
+        <ins class="adsbygoogle"
+             style="display:block"
+             data-ad-client="ca-pub-1633190542264617"
+             data-ad-slot="9012485731"
+             data-ad-format="auto"
+             full-width-responsive="true"></ins>
+        <script>
+             (adsbygoogle = window.adsbygoogle || []).push({});
+        </script>
     </div>
 
     <div class="nav-tabs">
@@ -381,13 +410,11 @@
     </div>
 
     <div class="app-workspace">
-        
         <div class="side-panel">
             <div class="panel-title"><div class="pulse-dot"></div> Live Activity</div>
             <div class="live-counter-box">
-                <span class="screen-desc"><span id="live-users" class="live-num">--</span> competitors online.</span>
+                <span class="screen-desc" style="user-select:none;"><span id="live-users" class="live-num">--</span> competitors online.</span>
             </div>
-            
             <div class="profile-status-box">
                 <div class="current-badge">YOUR IDENTITY</div>
                 <div class="profile-identity-row">
@@ -441,78 +468,81 @@
         <div class="side-panel">
             <div class="panel-title">🏆 Top 15 Global Records</div>
             <div class="leaderboard-scrollbox">
-                <div id="leaderboard-target" class="leaderboard-list">
-                    </div>
+                <div id="leaderboard-target" class="leaderboard-list"></div>
             </div>
         </div>
-
     </div>
 
+    <div class="content-scaffolding">
+        <div class="content-card">
+            <div class="content-section">
+                <h2>Understanding Kinetic Performance Benchmarks</h2>
+                <p>Voltara provides high-fidelity, client-side metric testing engines designed to benchmark cognitive processing mechanics, fine mechanical speed, and target tracking coordination. These tests serve as standardized evaluations utilized by competitive e-sports competitors to log operational performance limits and refine neural muscle memory loops over structural practice trials.</p>
+            </div>
+            <div class="content-section">
+                <h2>Reaction Time Testing Mechanics</h2>
+                <p>The human neurological system processes external visual stimuli through photoreceptors, shifting information down the visual cortex to trigger motor responses. The cognitive test on Voltara measures this interval with microsecond precision. By forcing the operator to wait through an algorithmically calculated variable delay window of calm green, the interface actively counters pre-emptive physical movement. The instant transformation to vivid red acts as the exact action trigger. Running across three successive iterations provides an analytical decimal average that mitigates random distribution errors.</p>
+            </div>
+            <div class="content-section">
+                <h2>Clicks Per Second (CPS) Output Metrics</h2>
+                <p>Fine motor velocity tracking via the Clicks Per Second system is a clear standard of muscular speed capability. This metric tracking utility processes raw physical inputs over an isolated 5.0-second testing window. Competitors utilize complex physiological mechanics such as jitter clicking—vibrating forearm muscles directly onto the interaction device—or butterfly tapping configurations to artificially optimize input registration speeds. Voltara uses isolated interface locks to catch and report input volume metrics cleanly without layout shifts.</p>
+            </div>
+            <div class="content-section">
+                <h2>Spatial Aim Calibration Parameters</h2>
+                <p>Precision target tracking incorporates a critical alignment of fluid spatial awareness and dynamic hand-eye motor stabilization. Within our calibration arena, thirty separate target objects are sequentially spawned at randomized coordinates. The speed profile forces the operator to perform precise reflex adjustments while maintaining maximum weapon accuracy. The metric records raw spatial throughput timings, exposing subtle tracking lag variations that can be optimized to build reliable muscle memory across various tactical desktop environments.</p>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <div class="footer-links">
+            <span class="footer-link" onclick="openLegal('privacy')">Privacy Policy</span>
+            <span class="footer-link" onclick="openLegal('terms')">Terms of Service</span>
+            <span class="footer-link" onclick="openLegal('contact')">Contact Support</span>
+        </div>
+        <div>&copy; 2026 Voltara. All rights reserved. Managed performance benchmark utilities.</div>
+    </footer>
+
     <script>
-        // Automatic Anonymous Generation initialization
         let randomGuestNum = Math.floor(Math.random() * 900 + 100);
         let userData = { name: `Guest #${randomGuestNum}`, flag: "🇵🇰" };
         let currentTabKey = "reaction";
 
-        // Global Pre-Populated 15-Person Data Bracket Matrix
         let leaderboardsData = {
             reaction: [
-                { name: "Viper_Click", flag: "🇺🇸", score: 0.15 },
-                { name: "Zaman_78", flag: "🇵🇰", score: 0.17 },
-                { name: "AlphaOp", flag: "🇮🇳", score: 0.19 },
-                { name: "Kaelen", flag: "🇨🇦", score: 0.21 },
-                { name: "Sajid_H", flag: "🇵🇰", score: 0.23 },
-                { name: "Faker_Reflex", flag: "🇰🇷", score: 0.24 },
-                { name: "TriggerHappy", flag: "🇬🇧", score: 0.26 },
-                { name: "Nexus_11", flag: "🇩🇪", score: 0.27 },
-                { name: "Mashood_Ul", flag: "🇵🇰", score: 0.29 },
-                { name: "PingGod", flag: "🇺🇸", score: 0.31 },
-                { name: "Asim_Riaz", flag: "🇵🇰", score: 0.33 },
-                { name: "ClickMatrix", flag: "🇮🇳", score: 0.35 },
-                { name: "NovaStrike", flag: "🇨🇦", score: 0.38 },
-                { name: "Shaheer_Z", flag: "🇵🇰", score: 0.40 },
+                { name: "Viper_Click", flag: "🇺🇸", score: 0.15 }, { name: "Zaman_78", flag: "🇵🇰", score: 0.17 },
+                { name: "AlphaOp", flag: "🇮🇳", score: 0.19 }, { name: "Kaelen", flag: "🇨🇦", score: 0.21 },
+                { name: "Sajid_H", flag: "🇵🇰", score: 0.23 }, { name: "Faker_Reflex", flag: "🇰🇷", score: 0.24 },
+                { name: "TriggerHappy", flag: "🇬🇧", score: 0.26 }, { name: "Nexus_11", flag: "🇩🇪", score: 0.27 },
+                { name: "Mashood_Ul", flag: "🇵🇰", score: 0.29 }, { name: "PingGod", flag: "🇺🇸", score: 0.31 },
+                { name: "Asim_Riaz", flag: "🇵🇰", score: 0.33 }, { name: "ClickMatrix", flag: "🇮🇳", score: 0.35 },
+                { name: "NovaStrike", flag: "🇨🇦", score: 0.38 }, { name: "Shaheer_Z", flag: "🇵🇰", score: 0.40 },
                 { name: "Gamer_Static", flag: "🇬🇧", score: 0.45 }
             ],
             cps: [
-                { name: "JitterGod", flag: "🇺🇸", score: 14.6 },
-                { name: "Asim_Khan", flag: "🇵🇰", score: 13.2 },
-                { name: "Matrix_9", flag: "🇮🇳", score: 12.1 },
-                { name: "Zeus_Click", flag: "🇬🇧", score: 11.4 },
-                { name: "Mashood_Ul", flag: "🇵🇰", score: 10.5 },
-                { name: "HyperTap", flag: "🇨🇦", score: 9.8 },
-                { name: "Quantum_C", flag: "🇩🇪", score: 9.2 },
-                { name: "Taheer_Ul", flag: "🇵🇰", score: 8.7 },
-                { name: "MacroFingers", flag: "🇺🇸", score: 8.1 },
-                { name: "Raj_Clicker", flag: "🇮🇳", score: 7.6 },
-                { name: "TurboJitter", flag: "🇬🇧", score: 7.2 },
-                { name: "Shaheer_X", flag: "🇵🇰", score: 6.8 },
-                { name: "SwiftStrike", flag: "🇨🇦", score: 6.3 },
-                { name: "Volt_Spam", flag: "🇩🇪", score: 5.9 },
+                { name: "JitterGod", flag: "🇺🇸", score: 14.6 }, { name: "Asim_Khan", flag: "🇵🇰", score: 13.2 },
+                { name: "Matrix_9", flag: "🇮🇳", score: 12.1 }, { name: "Zeus_Click", flag: "🇬🇧", score: 11.4 },
+                { name: "Mashood_Ul", flag: "🇵🇰", score: 10.5 }, { name: "HyperTap", flag: "🇨🇦", score: 9.8 },
+                { name: "Quantum_C", flag: "🇩🇪", score: 9.2 }, { name: "Taheer_Ul", flag: "🇵🇰", score: 8.7 },
+                { name: "MacroFingers", flag: "🇺🇸", score: 8.1 }, { name: "Raj_Clicker", flag: "🇮🇳", score: 7.6 },
+                { name: "TurboJitter", flag: "🇬🇧", score: 7.2 }, { name: "Shaheer_X", flag: "🇵🇰", score: 6.8 },
+                { name: "SwiftStrike", flag: "🇨🇦", score: 6.3 }, { name: "Volt_Spam", flag: "🇩🇪", score: 5.9 },
                 { name: "CasualHand", flag: "🇺🇸", score: 5.2 }
             ],
             aim: [
-                { name: "Shroud_Fan", flag: "🇨🇦", score: 12.10 },
-                { name: "Taheer_Ul", flag: "🇵🇰", score: 13.85 },
-                { name: "SniperOp", flag: "🇮🇳", score: 14.90 },
-                { name: "Bolt_Action", flag: "🇺🇸", score: 16.20 },
-                { name: "Shaheer_X", flag: "🇵🇰", score: 17.65 },
-                { name: "AimBot_Real", flag: "🇰🇷", score: 18.90 },
-                { name: "FlickGod", flag: "🇬🇧", score: 20.10 },
-                { name: "PixelPerfect", flag: "🇩🇪", score: 21.40 },
-                { name: "Zaman_Khan", flag: "🇵🇰", score: 22.80 },
-                { name: "ApexTracker", flag: "🇺🇸", score: 23.50 },
-                { name: "Rohan_Aim", flag: "🇮🇳", score: 24.90 },
-                { name: "MapleSights", flag: "🇨🇦", score: 26.20 },
-                { name: "Vortex_Op", flag: "🇩🇪", score: 27.40 },
-                { name: "Sajid_Huss", flag: "🇵🇰", score: 28.90 },
+                { name: "Shroud_Fan", flag: "🇨🇦", score: 12.10 }, { name: "Taheer_Ul", flag: "🇵🇰", score: 13.85 },
+                { name: "SniperOp", flag: "🇮🇳", score: 14.90 }, { name: "Bolt_Action", flag: "🇺🇸", score: 16.20 },
+                { name: "Shaheer_X", flag: "🇵🇰", score: 17.65 }, { name: "AimBot_Real", flag: "🇰🇷", score: 18.90 },
+                { name: "FlickGod", flag: "🇬🇧", score: 20.10 }, { name: "PixelPerfect", flag: "🇩🇪", score: 21.40 },
+                { name: "Zaman_Khan", flag: "🇵🇰", score: 22.80 }, { name: "ApexTracker", flag: "🇺🇸", score: 23.50 },
+                { name: "Rohan_Aim", flag: "🇮🇳", score: 24.90 }, { name: "MapleSights", flag: "🇨🇦", score: 26.20 },
+                { name: "Vortex_Op", flag: "🇩🇪", score: 27.40 }, { name: "Sajid_Huss", flag: "🇵🇰", score: 28.90 },
                 { name: "GamerSpecs", flag: "🇬🇧", score: 31.50 }
             ]
         };
 
         window.addEventListener('DOMContentLoaded', () => {
-            // Update sidebar placeholder values
             document.getElementById('lbl-user-name').innerText = userData.name;
-            
             let activeCount = Math.floor(Math.random() * 51) + 50; 
             document.getElementById('live-users').innerText = activeCount;
             setInterval(() => {
@@ -520,299 +550,132 @@
                 activeCount = Math.max(50, Math.min(100, activeCount + change));
                 document.getElementById('live-users').innerText = activeCount;
             }, 3500);
-
             renderLeaderboard();
         });
 
-        function openProfileModal() {
-            document.getElementById('profile-modal').style.display = 'flex';
-            // Pre-fill input if user already set something other than basic guest template
-            if(!userData.name.startsWith("Guest #")) {
-                document.getElementById('input-username').value = userData.name;
-            }
-        }
-        function closeProfileModal() { document.getElementById('profile-modal').style.display = 'none'; }
+        function openProfileModal() { document.getElementById('profile-modal').style.display = 'flex'; if(!userData.name.startsWith("Guest #")) { document.getElementById('input-username').value = userData.name; } }
+        function closeModal(id) { document.getElementById(id).style.display = 'none'; }
 
         function saveUserProfile() {
-            let oldName = userData.name;
-            const chosenName = document.getElementById('input-username').value.trim();
-            const chosenFlag = document.getElementById('input-country').value;
-            
-            if(chosenName !== "") { userData.name = chosenName; }
-            userData.flag = chosenFlag;
-            
-            document.getElementById('lbl-user-name').innerText = userData.name;
-            document.getElementById('lbl-user-flag').innerText = userData.flag;
-            
-            // Retroactively update historical score row references under old registration names
+            let oldName = userData.name; const chosenName = document.getElementById('input-username').value.trim(); const chosenFlag = document.getElementById('input-country').value;
+            if(chosenName !== "") { userData.name = chosenName; } userData.flag = chosenFlag;
+            document.getElementById('lbl-user-name').innerText = userData.name; document.getElementById('lbl-user-flag').innerText = userData.flag;
             ['reaction','cps','aim'].forEach(k => {
-                list = leaderboardsData[k];
-                let fIdx = list.findIndex(i => i.name === oldName);
-                if(fIdx !== -1) { 
-                    list[fIdx].name = userData.name; 
-                    list[fIdx].flag = userData.flag;
-                }
+                let list = leaderboardsData[k]; let fIdx = list.findIndex(i => i.name === oldName);
+                if(fIdx !== -1) { list[fIdx].name = userData.name; list[fIdx].flag = userData.flag; }
             });
-
-            closeProfileModal();
-            renderLeaderboard();
+            closeModal('profile-modal'); renderLeaderboard();
         }
 
         function renderLeaderboard() {
-            const list = leaderboardsData[currentTabKey];
-            const container = document.getElementById('leaderboard-target');
-            container.innerHTML = "";
-            
-            if (currentTabKey === "cps") { list.sort((a, b) => b.score - a.score); } 
-            else { list.sort((a, b) => a.score - b.score); }
-
+            const list = leaderboardsData[currentTabKey]; const container = document.getElementById('leaderboard-target'); container.innerHTML = "";
+            if (currentTabKey === "cps") { list.sort((a, b) => b.score - a.score); } else { list.sort((a, b) => a.score - b.score); }
             list.forEach((item, index) => {
-                const isUser = (item.name === userData.name);
-                const suffix = currentTabKey === "cps" ? " CPS" : "s";
-                const rowHtml = `
+                const isUser = (item.name === userData.name); const suffix = currentTabKey === "cps" ? " CPS" : "s";
+                container.innerHTML += `
                     <div class="leaderboard-row ${isUser ? 'user-row' : ''}">
                         <span class="rank-num">#${index + 1}</span>
                         <span class="flag-icon">${item.flag}</span>
                         <span class="player-name">${item.name}</span>
                         <span class="player-score">${item.score}${suffix}</span>
-                    </div>
-                `;
-                container.innerHTML += rowHtml;
+                    </div>`;
             });
         }
 
         function processNewScore(scoreVal) {
-            const list = leaderboardsData[currentTabKey];
-            let eligibleForBoard = false;
-
-            if (currentTabKey === "cps") { eligibleForBoard = scoreVal > list[list.length - 1].score; } 
-            else { eligibleForBoard = scoreVal < list[list.length - 1].score; }
-
+            const list = leaderboardsData[currentTabKey]; let eligibleForBoard = false;
+            if (currentTabKey === "cps") { eligibleForBoard = scoreVal > list[list.length - 1].score; } else { eligibleForBoard = scoreVal < list[list.length - 1].score; }
             if (eligibleForBoard) {
                 const existingIdx = list.findIndex(i => i.name === userData.name);
-                if(existingIdx !== -1) { list.splice(existingIdx, 1); } 
-                else { list.pop(); }
-                
-                list.push({ name: userData.name, flag: userData.flag, score: scoreVal });
-                renderLeaderboard();
+                if(existingIdx !== -1) { list.splice(existingIdx, 1); } else { list.pop(); }
+                list.push({ name: userData.name, flag: userData.flag, score: scoreVal }); renderLeaderboard();
             }
         }
 
         function switchTab(gameKey) {
-            currentTabKey = gameKey;
-            document.querySelectorAll('.tab-btn').forEach(btn => btn.classList.remove('active'));
-            document.querySelectorAll('.game-container').forEach(panel => panel.classList.remove('active'));
-            
+            currentTabKey = gameKey; document.querySelectorAll('.tab-btn').forEach(btn => btn.classList.remove('active')); document.querySelectorAll('.game-container').forEach(panel => panel.classList.remove('active'));
             if(event && event.target.classList.contains('tab-btn')) { event.target.classList.add('active'); }
             document.getElementById(`game-${gameKey}`).classList.add('active');
-            
-            resetReaction(null); resetCps(null); resetAim();
-            renderLeaderboard();
+            resetReaction(null); resetCps(null); resetAim(); renderLeaderboard();
         }
 
         /* --- REACTION TIME LOGIC (GREEN TO RED SEQUENCE) --- */
-        let reactionState = 'idle'; 
-        let reactionTimeout = null;
-        let reactionStartTime = 0;
-        let reactionRounds = [];
-        const maxRounds = 3;
-
-        const recScreen = document.getElementById('reaction-screen');
-        const recRoundInd = document.getElementById('reaction-round');
-        const recTitle = document.getElementById('reaction-title');
-        const recDesc = document.getElementById('reaction-desc');
-        const recResetBtn = document.getElementById('reaction-reset-btn');
+        let reactionState = 'idle'; let reactionTimeout = null; let reactionStartTime = 0; let reactionRounds = []; const maxRounds = 3;
+        const recScreen = document.getElementById('reaction-screen'); const recRoundInd = document.getElementById('reaction-round');
+        const recTitle = document.getElementById('reaction-title'); const recDesc = document.getElementById('reaction-desc'); const recResetBtn = document.getElementById('reaction-reset-btn');
 
         function triggerReactionAction() {
             if (reactionState === 'idle' && reactionRounds.length < maxRounds) {
-                reactionState = 'waiting';
-                recScreen.className = 'interactive-screen state-waiting'; // Calm Green state
-                recRoundInd.style.display = 'block';
-                recRoundInd.style.color = '#ffffff';
-                recRoundInd.innerText = `Round ${reactionRounds.length + 1} / ${maxRounds}`;
-                recTitle.innerText = 'Wait for Red...';
-                recDesc.innerText = 'Hold focus. Tap instantly when the screen updates to Red.';
-                
+                reactionState = 'waiting'; recScreen.className = 'interactive-screen state-waiting';
+                recRoundInd.style.display = 'block'; recRoundInd.style.color = '#ffffff'; recRoundInd.innerText = `Round ${reactionRounds.length + 1} / ${maxRounds}`;
+                recTitle.innerText = 'Wait for Red...'; recDesc.innerText = 'Hold focus. Tap instantly when the screen updates to Red.';
                 const randomDelay = Math.floor(Math.random() * 2200) + 1400;
                 reactionTimeout = setTimeout(() => {
-                    reactionState = 'ready';
-                    recScreen.className = 'interactive-screen state-ready'; // Vivid Red flash
-                    recTitle.innerText = 'TAP NOW!';
-                    recDesc.innerText = '';
-                    reactionStartTime = window.performance.now();
+                    reactionState = 'ready'; recScreen.className = 'interactive-screen state-ready';
+                    recTitle.innerText = 'TAP NOW!'; recDesc.innerText = ''; reactionStartTime = window.performance.now();
                 }, randomDelay);
-
             } else if (reactionState === 'waiting') {
-                clearTimeout(reactionTimeout);
-                reactionState = 'completed';
-                recScreen.className = 'interactive-screen';
-                recScreen.style.background = '#fee2e2'; recScreen.style.color = '#b91c1c';
-                recTitle.innerText = 'Too Early!';
-                recDesc.innerText = 'Anticipation penalty triggered. You tapped early.';
-                recRoundInd.style.display = 'none';
-                recResetBtn.style.display = 'inline-block';
-
+                clearTimeout(reactionTimeout); reactionState = 'completed'; recScreen.className = 'interactive-screen'; recScreen.style.background = '#fee2e2'; recScreen.style.color = '#b91c1c';
+                recTitle.innerText = 'Too Early!'; recDesc.innerText = 'Anticipation penalty triggered. You tapped early.'; recRoundInd.style.display = 'none'; recResetBtn.style.display = 'inline-block';
             } else if (reactionState === 'ready') {
-                const clickTime = window.performance.now() - reactionStartTime;
-                reactionRounds.push(clickTime);
-                
+                const clickTime = window.performance.now() - reactionStartTime; reactionRounds.push(clickTime);
                 if (reactionRounds.length < maxRounds) {
-                    reactionState = 'idle';
-                    recScreen.className = 'interactive-screen';
-                    recScreen.style.background = ''; recScreen.style.color = '';
-                    recTitle.innerHTML = `<div class="score-display">${Math.round(clickTime)} ms</div>`;
-                    recDesc.innerText = 'Recorded. Tap again to load next round parameters.';
+                    reactionState = 'idle'; recScreen.className = 'interactive-screen'; recScreen.style.background = ''; recScreen.style.color = '';
+                    recTitle.innerHTML = `<div class="score-display">${Math.round(clickTime)} ms</div>`; recDesc.innerText = 'Recorded. Tap again to load next round.';
                 } else {
-                    reactionState = 'completed';
-                    const sum = reactionRounds.reduce((a, b) => a + b, 0);
-                    const avgSeconds = parseFloat(((sum / maxRounds) / 1000).toFixed(2));
-                    
-                    recScreen.className = 'interactive-screen';
-                    recScreen.style.background = ''; recScreen.style.color = '';
-                    recRoundInd.style.display = 'none';
-                    recTitle.innerHTML = `<div class="score-display">${avgSeconds}s</div>`;
-                    recDesc.innerText = `Average response timing compiled across ${maxRounds} rounds.`;
-                    recResetBtn.style.display = 'inline-block';
-
+                    reactionState = 'completed'; const sum = reactionRounds.reduce((a, b) => a + b, 0); const avgSeconds = parseFloat(((sum / maxRounds) / 1000).toFixed(2));
+                    recScreen.className = 'interactive-screen'; recScreen.style.background = ''; recScreen.style.color = ''; recRoundInd.style.display = 'none';
+                    recTitle.innerHTML = `<div class="score-display">${avgSeconds}s</div>`; recDesc.innerText = `Average response timing compiled across ${maxRounds} rounds.`; recResetBtn.style.display = 'inline-block';
                     processNewScore(avgSeconds);
                 }
             }
         }
-
-        recScreen.addEventListener('pointerdown', (e) => {
-            if (e.target === recResetBtn) return;
-            triggerReactionAction();
-        });
-
-        function resetReaction(e) {
-            if(e) e.stopPropagation();
-            clearTimeout(reactionTimeout);
-            reactionState = 'idle'; reactionRounds = [];
-            recScreen.className = 'interactive-screen';
-            recScreen.style.background = ''; recScreen.style.color = '';
-            recRoundInd.style.display = 'none';
-            recTitle.innerText = 'Reaction Time Test';
-            recDesc.innerText = 'Tap anywhere to start. Wait for the box to flash RED, then tap immediately.';
-            recResetBtn.style.display = 'none';
-        }
-
+        recScreen.addEventListener('pointerdown', (e) => { if (e.target === recResetBtn) return; triggerReactionAction(); });
+        function resetReaction(e) { if(e) e.stopPropagation(); clearTimeout(reactionTimeout); reactionState = 'idle'; reactionRounds = []; recScreen.className = 'interactive-screen'; recScreen.style.background = ''; recScreen.style.color = ''; recRoundInd.style.display = 'none'; recTitle.innerText = 'Reaction Time Test'; recDesc.innerText = 'Tap anywhere to start. Wait for the box to flash RED, then tap immediately.'; recResetBtn.style.display = 'none'; }
 
         /* --- CPS TEST LOGIC --- */
         let cpsState = 'idle'; let cpsClicks = 0; let cpsTimerInterval = null; let cpsTimeLeft = 5;
-        const cpsScreen = document.getElementById('cps-screen');
-        const cpsTitle = document.getElementById('cps-title');
-        const cpsDesc = document.getElementById('cps-desc');
-        const cpsCounter = document.getElementById('cps-counter');
-        const cpsResetBtn = document.getElementById('cps-reset-btn');
+        const cpsScreen = document.getElementById('cps-screen'); const cpsTitle = document.getElementById('cps-title'); const cpsDesc = document.getElementById('cps-desc'); const cpsCounter = document.getElementById('cps-counter'); const cpsResetBtn = document.getElementById('cps-reset-btn');
 
         function handleCpsAction() {
             if (cpsState === 'idle') {
-                cpsState = 'running'; cpsClicks = 1; cpsTimeLeft = 5;
-                cpsCounter.style.display = 'block'; cpsCounter.innerText = cpsClicks;
+                cpsState = 'running'; cpsClicks = 1; cpsTimeLeft = 5; cpsCounter.style.display = 'block'; cpsCounter.innerText = cpsClicks;
                 cpsTitle.innerText = 'Spam clicks!'; cpsDesc.innerText = `Time Remaining: ${cpsTimeLeft}s`;
-                
-                cpsTimerInterval = setInterval(() => {
-                    cpsTimeLeft--;
-                    if (cpsTimeLeft > 0) { cpsDesc.innerText = `Time Remaining: ${cpsTimeLeft}s`; } 
-                    else { clearInterval(cpsTimerInterval); endCpsTest(); }
-                }, 1000);
-            } else if (cpsState === 'running') {
-                cpsClicks++; cpsCounter.innerText = cpsClicks;
-            }
+                cpsTimerInterval = setInterval(() => { cpsTimeLeft--; if (cpsTimeLeft > 0) { cpsDesc.innerText = `Time Remaining: ${cpsTimeLeft}s`; } else { clearInterval(cpsTimerInterval); endCpsTest(); } }, 1000);
+            } else if (cpsState === 'running') { cpsClicks++; cpsCounter.innerText = cpsClicks; }
         }
-
-        function endCpsTest() {
-            cpsState = 'finished';
-            const finalCps = parseFloat((cpsClicks / 5).toFixed(1));
-            cpsTitle.innerHTML = `<div class="score-display">${finalCps} CPS</div>`;
-            cpsDesc.innerText = `Total interactions: ${cpsClicks} hits over a 5.0s window.`;
-            cpsCounter.style.display = 'none';
-            cpsResetBtn.style.display = 'inline-block';
-            processNewScore(finalCps);
-        }
-
-        cpsScreen.addEventListener('pointerdown', (e) => {
-            if (e.target === cpsResetBtn) return;
-            handleCpsAction();
-        });
-
-        function resetCps(e) {
-            if(e) e.stopPropagation();
-            clearInterval(cpsTimerInterval);
-            cpsState = 'idle'; cpsClicks = 0; cpsTimeLeft = 5;
-            cpsTitle.innerText = 'Clicks Per Second';
-            cpsDesc.innerText = 'Tap inside this region to launch your 5-second trial.';
-            cpsCounter.style.display = 'none'; cpsResetBtn.style.display = 'none';
-        }
-
+        function endCpsTest() { cpsState = 'finished'; const finalCps = parseFloat((cpsClicks / 5).toFixed(1)); cpsTitle.innerHTML = `<div class="score-display">${finalCps} CPS</div>`; cpsDesc.innerText = `Total interactions: ${cpsClicks} hits over a 5.0s window.`; cpsCounter.style.display = 'none'; cpsResetBtn.style.display = 'inline-block'; processNewScore(finalCps); }
+        cpsScreen.addEventListener('pointerdown', (e) => { if (e.target === cpsResetBtn) return; handleCpsAction(); });
+        function resetCps(e) { if(e) e.stopPropagation(); clearInterval(cpsTimerInterval); cpsState = 'idle'; cpsClicks = 0; cpsTimeLeft = 5; cpsTitle.innerText = 'Clicks Per Second'; cpsDesc.innerText = 'Tap inside this region to launch your 5-second trial.'; cpsCounter.style.display = 'none'; cpsResetBtn.style.display = 'none'; }
 
         /* --- AIM TRAINER LOGIC --- */
-        let aimScore = 0; let aimTotalTargets = 30; let aimTimerVal = 30; let aimTimerInterval = null; let aimStartTime = 0;
-        const canvasContainer = document.getElementById('aim-canvas-container');
+        let aimScore = 0; let aimTotalTargets = 30; let aimTimerVal = 30; let aimTimerInterval = null; let aimStartTime = 0; const canvasContainer = document.getElementById('aim-canvas-container');
+        function startAimTrainer(e) { if(e) e.stopPropagation(); document.getElementById('aim-start-screen').style.display = 'none'; aimScore = 0; aimTimerVal = 30; document.getElementById('aim-score').innerText = `0/${aimTotalTargets}`; document.getElementById('aim-timer').innerText = `${aimTimerVal}s`; aimStartTime = window.performance.now(); aimTimerInterval = setInterval(() => { aimTimerVal--; document.getElementById('aim-timer').innerText = `${aimTimerVal}s`; if (aimTimerVal <= 0) { endAimTrainer(false); } }, 1000); spawnTarget(); }
+        function spawnTarget() { if (aimScore >= aimTotalTargets) { endAimTrainer(true); return; } const target = document.createElement('div'); target.className = 'aim-target'; const containerWidth = canvasContainer.clientWidth; const containerHeight = canvasContainer.clientHeight; const x = Math.floor(Math.random() * (containerWidth - 60)) + 30; const y = Math.floor(Math.random() * (containerHeight - 60)) + 30; target.style.left = `${x}px`; target.style.top = `${y}px`; target.addEventListener('pointerdown', (e) => { e.stopPropagation(); aimScore++; document.getElementById('aim-score').innerText = `${aimScore}/${aimTotalTargets}`; target.remove(); spawnTarget(); }); canvasContainer.appendChild(target); }
+        function endAimTrainer(completed) { clearInterval(aimTimerInterval); document.querySelectorAll('.aim-target').forEach(t => t.remove()); const startScreen = document.getElementById('aim-start-screen'); const titleEl = startScreen.querySelector('.screen-title'); const descEl = startScreen.querySelector('.screen-desc'); const btnEl = startScreen.querySelector('.action-btn'); if (completed) { const totalTime = parseFloat(((window.performance.now() - aimStartTime) / 1000).toFixed(2)); titleEl.innerHTML = `<div class="score-display">${totalTime}s</div>`; descEl.innerText = `Processed 30 targets successfully.`; processNewScore(totalTime); } else { titleEl.innerText = "Time Expired"; descEl.innerText = `Cleared ${aimScore} out of ${aimTotalTargets} targets.`; } btnEl.innerText = "Try Again"; startScreen.style.display = 'flex'; }
+        function resetAim() { clearInterval(aimTimerInterval); document.querySelectorAll('.aim-target').forEach(t => t.remove()); const startScreen = document.getElementById('aim-start-screen'); startScreen.querySelector('.screen-title').innerText = "Aim Precision"; startScreen.querySelector('.screen-desc').innerText = "Pop 30 dynamic targets as fast as your tracking allows."; startScreen.querySelector('.action-btn').innerText = "Start Challenge"; startScreen.style.display = 'flex'; document.getElementById('aim-score').innerText = "0/30"; document.getElementById('aim-timer').innerText = "30s"; }
 
-        function startAimTrainer(e) {
-            if(e) e.stopPropagation();
-            document.getElementById('aim-start-screen').style.display = 'none';
-            aimScore = 0; aimTimerVal = 30;
-            document.getElementById('aim-score').innerText = `0/${aimTotalTargets}`;
-            document.getElementById('aim-timer').innerText = `${aimTimerVal}s`;
-            aimStartTime = window.performance.now();
-            
-            aimTimerInterval = setInterval(() => {
-                aimTimerVal--;
-                document.getElementById('aim-timer').innerText = `${aimTimerVal}s`;
-                if (aimTimerVal <= 0) { endAimTrainer(false); }
-            }, 1000);
-            spawnTarget();
-        }
-
-        function spawnTarget() {
-            if (aimScore >= aimTotalTargets) { endAimTrainer(true); return; }
-            const target = document.createElement('div');
-            target.className = 'aim-target';
-            const containerWidth = canvasContainer.clientWidth;
-            const containerHeight = canvasContainer.clientHeight;
-            const x = Math.floor(Math.random() * (containerWidth - 60)) + 30;
-            const y = Math.floor(Math.random() * (containerHeight - 60)) + 30;
-            target.style.left = `${x}px`; target.style.top = `${y}px`;
-            
-            target.addEventListener('pointerdown', (e) => {
-                e.stopPropagation(); aimScore++;
-                document.getElementById('aim-score').innerText = `${aimScore}/${aimTotalTargets}`;
-                target.remove(); spawnTarget();
-            });
-            canvasContainer.appendChild(target);
-        }
-
-        function endAimTrainer(completed) {
-            clearInterval(aimTimerInterval);
-            document.querySelectorAll('.aim-target').forEach(t => t.remove());
-            const startScreen = document.getElementById('aim-start-screen');
-            const titleEl = startScreen.querySelector('.screen-title');
-            const descEl = startScreen.querySelector('.screen-desc');
-            const btnEl = startScreen.querySelector('.action-btn');
-            
-            if (completed) {
-                const totalTime = parseFloat(((window.performance.now() - aimStartTime) / 1000).toFixed(2));
-                titleEl.innerHTML = `<div class="score-display">${totalTime}s</div>`;
-                descEl.innerText = `Processed 30 target parameters successfully.`;
-                processNewScore(totalTime);
-            } else {
-                titleEl.innerText = "Time Expired";
-                descEl.innerText = `Cleared ${aimScore} out of ${aimTotalTargets} targets.`;
+        /* --- MODERN MODAL COMPLIANCE REGULATION SYSTEM --- */
+        const complianceDocs = {
+            privacy: {
+                title: "Privacy Policy",
+                text: "Voltara utilizes standard optimization metrics tracking cookies to store local performance data configurations. We use third-party advertising companies to serve ads when you visit our website. These companies (including Google AdSense) may use information about your visits to this and other websites in order to provide advertisements about goods and services of interest to you. Google, as a third-party vendor, uses cookies to serve ads on this site. Users may opt out of the use of the DNT cookie parameters by visiting the Google Ad and Content Network privacy policy directly. Local browser mechanics store high scores entirely client-side."
+            },
+            terms: {
+                title: "Terms of Service",
+                text: "By interacting with the testing frameworks deployed across Voltara, you agree that all calculated metrics are structured entirely client-side. No automated macro modifications, simulated script loops, or layout adjustments are authorized when running the dynamic metrics tests. Voltara offers benchmark evaluations for personal self-improvement tracking purposes, provided completely free of legal warranty assurances."
+            },
+            contact: {
+                title: "Contact Support",
+                text: "For legal administration requirements, verification requests, or custom performance metric engine collaboration inquiries regarding the Voltara environment, reach out directly via electronic mail channels at support@voltara.work."
             }
-            btnEl.innerText = "Try Again"; startScreen.style.display = 'flex';
-        }
+        };
 
-        function resetAim() {
-            clearInterval(aimTimerInterval);
-            document.querySelectorAll('.aim-target').forEach(t => t.remove());
-            const startScreen = document.getElementById('aim-start-screen');
-            startScreen.querySelector('.screen-title').innerText = "Aim Precision";
-            startScreen.querySelector('.screen-desc').innerText = "Pop 30 dynamic targets as fast as your tracking allows.";
-            startScreen.querySelector('.action-btn').innerText = "Start Challenge";
-            startScreen.style.display = 'flex';
-            document.getElementById('aim-score').innerText = "0/30"; document.getElementById('aim-timer').innerText = "30s";
+        function openLegal(key) {
+            document.getElementById('legal-modal-title').innerText = complianceDocs[key].title;
+            document.getElementById('legal-modal-body').innerText = complianceDocs[key].text;
+            document.getElementById('legal-modal-active-box');
+            document.getElementById('legal-modal').style.display = 'flex';
         }
     </script>
 </body>
